@@ -1,0 +1,34 @@
+{
+  "name": "bluesmokemagicians",
+  "version": "1.0.0",
+  "description": "tinder for developer",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "dependencies": {
+      "body-parser": "^*",
+      "express": "^*",
+      "express-handlebars": "^*",
+      "method-override": "^*",
+      "mysql": "^*",
+      "sequelize": "^*"
+    },
+    "devDependencies": {
+      "handlebars-helper-css": "^0.1.0"
+    },
+    "engines":{
+      "node":"6.9.4"
+    },
+    "url": "git+https://github.com/usmanjamil83/BlueSmokeMagicians.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/usmanjamil83/BlueSmokeMagicians/issues"
+  },
+  "homepage": "https://github.com/usmanjamil83/BlueSmokeMagicians#readme"
+}
