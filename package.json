@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,8 @@
     "devDependencies": {
       "handlebars-helper-css": "^0.1.0"
     },
-    "engines":{
-      "node":"6.9.4"
+    "engines": {
+      "node": "6.9.4"
     },
     "url": "git+https://github.com/usmanjamil83/BlueSmokeMagicians.git"
   },
@@ -30,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/usmanjamil83/BlueSmokeMagicians/issues"
   },
-  "homepage": "https://github.com/usmanjamil83/BlueSmokeMagicians#readme"
+  "homepage": "https://github.com/usmanjamil83/BlueSmokeMagicians#readme",
+  "dependencies": {
+    "sequelize": "^3.30.4"
+  }
 }
