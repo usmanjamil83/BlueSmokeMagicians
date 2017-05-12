@@ -3,19 +3,19 @@ module.exports = function(sequelize, DataTypes) {
     name: {
       type: DataTypes.STRING,
       validate: {
-        isAlpha: true, 
+        isAlpha: true,
         notNull: true,
         //do we need this as well?
         notEmpty: true,
-        len: [2,25]
+        len: [2, 25]
       }
     },
     age: {
       type: DataTypes.INTEGER,
       validate: {
         len: [2],
-        min: 18, 
-        max: 99, 
+        min: 18,
+        max: 99,
         isAlpha: false,
         notNull: true,
         notEmpty: true
@@ -25,7 +25,9 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       defaultValue: "Male",
       validate: {
-        isIn: [["Male", "Female", "Transgender", "Transsexual", "Agender", "Androgynous", "Pangender"]],
+        isIn: [
+          ["Male", "Female", "Transgender", "Transsexual", "Agender", "Androgynous", "Pangender"]
+        ],
       }
     },
     tagline: {
@@ -34,20 +36,20 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         notNull: true,
         isAlphanumeric: true,
-        len: [2,100],
+        len: [2, 100],
       }
     },
     image: {
-      type: DataTypes.BLOB, 
+      type: DataTypes.BLOB,
       validate: {
         notNull: true
-      //does extra data need to be added here?
+          //does extra data need to be added here?
       }
     },
     match: {
       type: DataTypes.STRING,
       validate: {
-        notNull:true
+        notNull: true
       }
     }
   });
