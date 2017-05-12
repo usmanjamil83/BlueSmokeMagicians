@@ -17,11 +17,19 @@ module.exports = function(app) {
   });
 
   // blog route loads blog.html
-  app.get("/blog", function(req, res) {
+  app.get("/questions", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/questions.html"));
   });
 
-  app.get("/authors", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/.html"));
+  app.get("/matches", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/matches.html"));
+  });
+
+  app.get("/swipe", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/swipe.html"));
+  });
+
+  app.get("/contact", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/contact.html"));
   });
 };
