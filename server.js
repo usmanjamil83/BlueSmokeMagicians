@@ -1,7 +1,7 @@
 //Blue Smoke Magicians server setup
 var express = require("express");
 var bodyParser = require("body-parser");
-var methodOverride = require("method-override");
+// var methodOverride = require("method-override");
 
 // Sets up the Express App
 // =============================================================
@@ -16,7 +16,7 @@ app.use(express.static(process.cwd() + "/public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Override with POST having ?_method=DELETE
-app.use(methodOverride("_method"));
+// app.use(methodOverride("_method"));
 
 // Routes 
 require("./routes/html-routes.js")(app);
