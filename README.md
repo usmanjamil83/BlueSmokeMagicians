@@ -1,2 +1,1 @@
 # BlueSmokeMagicians
-Blue Smoke Magicians
