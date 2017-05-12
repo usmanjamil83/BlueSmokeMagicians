@@ -1,3 +1,3 @@
-CREATE DATABASE ;
+CREATE DATABASE gitup_bd;
 
-USE ;
+USE gitup_bd;
