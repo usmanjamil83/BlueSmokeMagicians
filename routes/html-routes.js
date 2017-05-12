@@ -18,10 +18,10 @@ module.exports = function(app) {
 
   // blog route loads blog.html
   app.get("/blog", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/language.html"));
+    res.sendFile(path.join(__dirname, "../public/questions.html"));
   });
 
   app.get("/authors", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/match.html"));
+    res.sendFile(path.join(__dirname, "../public/.html"));
   });
 };
