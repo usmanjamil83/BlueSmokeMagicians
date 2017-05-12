@@ -1,0 +1,21 @@
+.container{
+  margin-top: 20px;
+}
+
+.img_container{
+  margin: 0 auto;
+  border: solid #DAD5D2 1px;
+  color: #DAD5D2;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+}
+
+.img_text{
+  margin-top: 60px;
+}
+
+
+.form_text{
+  font-size: 16px;
+}
