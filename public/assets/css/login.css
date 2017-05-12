@@ -1,9 +1,9 @@
 .catopusImg{
-  padding: 40px;
+  padding: 30px;
 }
 
 .btn-1{
-	width: 217px;
+	width: 317px;
 	height: 52px;
   margin: 40px;
 }
@@ -13,5 +13,6 @@
 }
 
 .like_function{
-  margin: 60px;
+  width: 300px;
+  margin: 70px;
 }
