@@ -1,0 +1,2 @@
+-- Use github_db.User;
+-- INSERT into github_db.User (name, age, gender, tagline, image, match) VALUES ("jdoe", 25, "Female", "hello", "home/christine/Pictures/Screenshot.png", "person1");

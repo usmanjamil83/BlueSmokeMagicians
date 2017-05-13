@@ -26,11 +26,11 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: "Male",
       validate: {
         isIn: [
-          ["Male", "Female", "Transgender", "Transsexual", "Agender", "Androgynous", "Pangender"]
+          ["Agender", "Androgynous", "Female", "Male", "Pangender", "Transgender", "Transsexual"]
         ],
       }
     },
-    tagline: {
+    quote: {
       type: DataTypes.STRING,
       defaultValue: "Let's git up!",
       validate: {
@@ -40,7 +40,8 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     image: {
-      type: DataTypes.BLOB,
+      //change dt to string to store file path instead?
+      type: DataTypes.STRING,
       validate: {
         notNull: true
           //does extra data need to be added here?
