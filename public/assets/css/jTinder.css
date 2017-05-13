@@ -207,7 +207,7 @@ body {
     background-size: 200px;
 }
 #tinderslide .pane1 .img {
-    background: url("../img/pane/jobs.png") no-repeat scroll center center;
+    /*background: url("../img/pane/jobs.png") no-repeat scroll center center;*/
     background-size: cover;
     background-size: 200px;
 }
