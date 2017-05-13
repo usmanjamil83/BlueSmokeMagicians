@@ -16,7 +16,7 @@
   "production": {
     "username": "b0lvj1e5a8uz74uh",
     "password": "qh0b4ysbnk5vzjzj",
-    "database": "evgcsmc91chublva",
+    "database": "evgcsmc91chublvagit",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
