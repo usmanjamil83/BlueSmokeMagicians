@@ -10,8 +10,9 @@ $("#tinderslide").jTinder({
 	// like callback
     onLike: function (item) {
 
-			// window.location.replace("../public/matches.html"+"?id=5");
+			window.location.replace("../public/matches.html"+"?"+item[0].id);
 			console.log(item);
+			console.log(item[0].id);
 
 	    // set the status text
         $('#status').html('Like image ' + (item.index()+1));
@@ -33,5 +34,10 @@ $('.actions .like, .actions .dislike').click(function(e){
 });
 
 $('#paneOne').css(
-	{'background': 'url("../public/assets/img/pane/jobs.png") no-repeat scroll center center'}
+	{'background': 'url("../public/assets/img/pane/jobs.png") no-repeat scroll center center',
+	'background-size': 'cover',
+	'background-size': '200px'
+	}
 );
+
+$('#paneOneUserInfo').html("Enter User Info Here");
