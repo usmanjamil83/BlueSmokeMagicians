@@ -45,8 +45,8 @@ $(document).ready(function() {
           // img: $("img"),
           name: $("#name").val(),
           quote: $("#quote").val(),
-          gender: [$("#1").val(), $("#2").val(), $("#3").val(), $("#4").val(), $("#5").val(),
-          $("#6").val(), $("#7").val()]
+          gender: [$("#Agender").val(), $("#Androgynous").val(), $("#Female").val(), $("#Male").val(), $("#Pangender").val(),
+          $("#Transgender").val(), $("#Transsexual").val()]
         }
 
 
