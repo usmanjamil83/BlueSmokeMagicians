@@ -9,10 +9,14 @@ $("#tinderslide").jTinder({
     },
 	// like callback
     onLike: function (item) {
+
+			window.location.replace("../public/matches.html"+"?"+item[0].id);
+			console.log(item);
+			console.log(item[0].id);
+
 	    // set the status text
-			window.location.replace("../public/matches.html");
-        // $('#status').html('Like image ' + (item.index()+1));
-				// console.log("You liked this item!!!");
+        $('#status').html('Like image ' + (item.index()+1));
+				console.log("You liked this item!!!");
     },
 	animationRevertSpeed: 200,
 	animationSpeed: 400,
@@ -28,3 +32,12 @@ $('.actions .like, .actions .dislike').click(function(e){
 	e.preventDefault();
 	$("#tinderslide").jTinder($(this).attr('class'));
 });
+
+$('#paneOne').css(
+	{'background': 'url("../public/assets/img/pane/jobs.png") no-repeat scroll center center',
+	'background-size': 'cover',
+	'background-size': '200px'
+	}
+);
+
+$('#paneOneUserInfo').html("Enter User Info Here");
