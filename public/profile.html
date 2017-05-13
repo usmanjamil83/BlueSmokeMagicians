@@ -41,7 +41,7 @@
                   <div class="col s12 center-align img_text">
                      Photo
                      <div class="input-field inline center-align">
-                        <input id="img_upload" class="file-path validate" type="file" onchange="previewFile()" placeholder="Upload file">
+                        <input id="img" class="file-path validate" type="file" onchange="previewFile()" placeholder="Upload file">
                         <label for="photo" data-error="wrong" data-success="right"></label>
                      </div>
                   </div>
@@ -50,7 +50,7 @@
             <div class="row">
                <div class="row">
                   <div class="input-field col s12">
-                     <input placeholder="John Q Programmer" id="first_name" type="text" class="validate">
+                     <input placeholder="John Q Programmer" id="name" type="text" class="validate">
                      <label for="first_name">Name</label>
                   </div>
                </div>
@@ -67,16 +67,16 @@
                   </div>
                </div>
                <div class="row">
-                  <div class="input-field col s12">
+                  <div id="gender" class="input-field col s12">
                      <select>
                        <option></option>
-                        <option value="1">Agender</option>
-                        <option value="2">Androgynous</option>
-                        <option value="3">Female</option>
-                        <option value="4">Male</option>
-                        <option value="5">Pangender</option>
-                        <option value="6">Transgender</option>
-                        <option value="7">Transsexual</option>
+                        <option value="Agender">Agender</option>
+                        <option value="Androgynous">Androgynous</option>
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                        <option value="Pangender">Pangender</option>
+                        <option value="Transgender">Transgender</option>
+                        <option value="Transsexual">Transsexual</option>
                      </select>
                      <label>Gender</label>
                   </div>
