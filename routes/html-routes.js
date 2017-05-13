@@ -6,22 +6,32 @@ module.exports = function(app) {
 
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
-  // index route loads view.html
+  // login route loads login.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
+    res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
-  // cms route loads cms.html
+  // profile route loads profile.html
   app.get("/profile", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/profile.html"));
   });
 
-  // blog route loads blog.html
-  app.get("/blog", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/language.html"));
+
+  app.get("/questions", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/questions.html"));
   });
 
-  app.get("/authors", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/match.html"));
+
+  app.get("/matches", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/matches.html"));
+  });
+
+
+  app.get("/swipe", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/swipe.html"));
+  });
+
+  app.get("/contact", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/contact.html"));
   });
 };

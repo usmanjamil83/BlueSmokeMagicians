@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "blogger",
+    "password": "chrisa8300@gmail.com",
+    "database": "gitup_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
@@ -16,7 +16,7 @@
   "production": {
     "username": "root",
     "password": null,
-    "database": "gitup_db",
+    "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
