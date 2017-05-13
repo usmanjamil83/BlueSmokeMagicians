@@ -54,24 +54,24 @@ $(document).ready(function() {
         var currentURL = window.location.origin;
 
         // AJAX post the data to the friends API.
-        $.post(currentURL + "/api/", userData, function(data){
-          console.log("data: " + data.name);
-          // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-          $("#match-name").text(data.name);
-          $('#match-image').attr("src", data.image);
-
-          // Show the modal with the best match
-          $("#resultsModal").modal('toggle');
-
-        });
-    }
-    else
-    {
-      alert("Please fill out all fields before submitting!");
-    }
-
-      return false;
-    });
+    //     $.post(currentURL + "/api/", userData, function(data){
+    //       console.log("data: " + data.name);
+    //       // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+    //       $("#match-name").text(data.name);
+    //       $('#match-image').attr("src", data.image);
+    //
+    //       // Show the modal with the best match
+    //       $("#resultsModal").modal('toggle');
+    //
+    //     });
+    // }
+    // else
+    // {
+    //   alert("Please fill out all fields before submitting!");
+    // }
+    //
+    //   return false;
+    // });
 
 
 });
