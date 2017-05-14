@@ -1,6 +1,8 @@
 /**
  * jTinder initialization
  */
+
+// This function takes action when a match card is liked or disliked
 $("#tinderslide").jTinder({
 	// dislike callback
     onDislike: function (item) {
@@ -10,7 +12,7 @@ $("#tinderslide").jTinder({
 	// like callback
     onLike: function (item) {
 
-			window.location.replace("../public/matches.html"+"?"+item[0].id);
+			window.location.replace("../public/contact.html"+"?"+item[0].id);
 			console.log(item);
 			console.log(item[0].id);
 
@@ -33,11 +35,38 @@ $('.actions .like, .actions .dislike').click(function(e){
 	$("#tinderslide").jTinder($(this).attr('class'));
 });
 
-$('#paneOne').css(
-	{'background': 'url("../public/assets/img/pane/jobs.png") no-repeat scroll center center',
-	'background-size': 'cover',
-	'background-size': '200px'
-	}
-);
+// -----------------------------------------------------------------------------------------------------
+// Code below contains js written by the team to compliment the code inherited from the jTinder package
+// -----------------------------------------------------------------------------------------------------
 
-$('#paneOneUserInfo').html("Enter User Info Here");
+// Declare a couple global variables
+var imgArray = {};
+
+
+// Code below populates the match cards with the matched user's information.
+// It is written in a way to override the jTinder package's handling of this function in css
+function populatePanes() {
+	for (var i = 1; i < 6; i++) {
+		var paneId = "#paneId" + i;
+		var userInfo = "#userInfo" + i;
+		console.log(paneId);
+		console.log(userInfo);
+
+		// This code adds the image to the pane
+		$(paneId).css(
+			{'background': 'url("../public/assets/img/pane/jobs_img.png") no-repeat scroll center center',
+			'background-size': 'cover',
+			'background-size': '50%',
+			'background-color': 'white'
+			}
+		);
+		// This code adds the user info to the pane
+		$(userInfo).css({
+			'background-color':'white'
+		});
+		$(userInfo).html("User Name<br>"+ "User Quote<br>"+"User Dev Preferences<br>");
+	}
+}
+
+// Run the function to populate panes on load
+populatePanes();

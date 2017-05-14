@@ -11,7 +11,7 @@ body {
 
 /* Wrapper with padding */
 .wrap  {
-    height: 500px;
+    height: 600px;
     padding: 5%;
 }
 
@@ -76,6 +76,7 @@ body {
     -o-transform: rotate(-1deg);
     -ms-transform: rotate(-1deg);
     transform: rotate(-1deg);
+    background-color: white;
 }
 
 #tinderslide li.pane2 {
@@ -84,6 +85,7 @@ body {
     -o-transform: rotate(2deg);
     -ms-transform: rotate(2deg);
     transform: rotate(2deg);
+    background-color: white;
 }
 
 /* Like & dislike badge images */
@@ -129,6 +131,8 @@ body {
     -webkit-backface-visibility: hidden;
     -webkit-transform: translate3d(0,0,0) scale3d(1,1,1);
     -webkit-transform-style: preserve-3d;
+    /*background-color: white;*/
+    top: -20%;
 }
 
 /* Action - buttons */
@@ -187,7 +191,7 @@ body {
 }
 
 /* jTinder images */
-#tinderslide .pane5 .img {
+/*#tinderslide .pane5 .img {
     background: url("../img/pane/marissa.jpg") no-repeat scroll center center;
     background-size: 200px;
 }
@@ -207,10 +211,10 @@ body {
     background-size: 200px;
 }
 #tinderslide .pane1 .img {
-    /*background: url("../img/pane/jobs.png") no-repeat scroll center center;*/
-    /*background-size: cover;
-    background-size: 200px;*/
-}
+    background: url("../img/pane/jobs.png") no-repeat scroll center center;
+    background-size: cover;
+    background-size: 200px;
+}*/
 
 /* jTinder status text */
 #status {
