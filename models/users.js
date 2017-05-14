@@ -26,7 +26,7 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: "Male",
       validate: {
         isIn: [
-          ["Agender", "Androgynous", "Female", "Male", "Pangender", "Transgender", "Transsexual"]
+        ["Agender", "Androgynous", "Female", "Male", "Pangender", "Transgender", "Transsexual"]
         ],
       }
     },
@@ -45,14 +45,8 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         notNull: true
           //does extra data need to be added here?
+        }
       }
-    },
-    match: {
-      type: DataTypes.STRING,
-      validate: {
-        notNull: true
-      }
-    }
-  });
+    });
   return User;
 };
