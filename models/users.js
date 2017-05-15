@@ -1,5 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
+    timestamps: false,
     name: {
       type: DataTypes.STRING,
       validate: {
@@ -42,6 +43,7 @@ module.exports = function(sequelize, DataTypes) {
     image: {
       //change dt to string to store file path instead?
       type: DataTypes.STRING,
+      defaultValue: "home/christine/Pictures/Screenshot.png",
       validate: {
         notNull: true
           //does extra data need to be added here?
