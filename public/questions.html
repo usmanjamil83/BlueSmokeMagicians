@@ -28,6 +28,14 @@
         </div>
         <div class="row">
           <form action="#">
+            <!-- Temporary form field for name...using for testing -->
+            <div class="row">
+              <div class="input-field">
+                <input id="first_name" type="text" class="validate">
+                <label for="first_name">Enter First Name</label>
+              </div>
+            </div>
+            <!-- End of code for temp form field -->
             <img class="questionImage" src="./assets/img/pc_mac.png" alt="Comparison Picture">
             <p>
               <input class="with-gap questionButtons" name="question1" type="radio" id="response1_1" />
@@ -93,7 +101,7 @@
               <label for="response6_2">Back-End</label>
             </p>
             <hr noshade>
-            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <button class="btn waves-effect waves-light" type="submit" id="submit" name="action">Submit
               <!-- <i class="material-icons right">send</i> -->
             </button>
           </form>
