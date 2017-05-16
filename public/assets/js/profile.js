@@ -12,56 +12,60 @@ $(document).ready(function() {
     $("#submit_btn").on("click", function(e){
       e.preventDefault();
       // Form validation
-      function validateForm() {
-      var isValid = true;
-      // $('.validate').each(function() {
-      //   if ( $(this).val() === '' )
-      //       console.log('Did not populate: ' + $(this));
-      //       isValid = false;
-      // });
+    //   function validateForm() {
+    //   var isValid = true;
+    //   // $('.validate').each(function() {
+    //   //   if ( $(this).val() === '' )
+    //   //       console.log('Did not populate: ' + $(this));
+    //   //       isValid = false;
+    //   // });
 
-      $('.chosen-select').each(function() {
+    //   $('.chosen-select').each(function() {
 
-        if( $(this).val() === "")
-          isValid = false
-      })
-      return isValid;
-    }
+    //     if( $(this).val() === undefined)
+    //       isValid = true;
+    //   });
+    //   return isValid;
+    // }
 
     // If all required fields are filled
-    if (validateForm() == true)
-    {
+    // if (validateForm() === true)
+    // {
       // Create an object for the user's data
         var userData = {
           // img: $("img"),
           name: $("#name").val(),
           quote: $("#quote").val(),
           gender: $("#gender").val(),
-          image: $("#image").val(),
+          // image: $("#image").val(),
           age: $("#age").val()
         };
+        
+        var chosen = $(".chosen-select");
+        console.log(chosen.val() + "is logged");
+        console.log(userData);
 
-
-        // Grab the URL of the website
-        var currentURL = window.location.origin;
-        console.log("Endpoint: " + currentURL + "/api/blah");
+        // // Grab the URL of the website
+        // var currentURL = window.location.origin;
+        // console.log("Endpoint: " + currentURL + "/api/users");
         // AJAX post the data to the friends API.
-        $.post(currentURL + "/api/users", userData, function(data){
-          console.log("dbnvfata: " + data.name);
+        // $.post(currentURL + "/api/users", userData, function(data){
+           $.post("/api/users", userData, function(data){
 
+          console.log("dbnvfata: " + data.name);
           // $("#name").text(data.name);
           // $('#name').attr("src", data.image);
 
 
 
         });
-    }
-    else
-    {
-      alert("Please fill out all fields before submitting!");
-    }
+    // }
+    // else
+    // {
+    //   alert("Please fill out all fields before submitting!");
+    // }
 
-      return false;
+      // return false;
     });
 
 
