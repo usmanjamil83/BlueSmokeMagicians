@@ -24,7 +24,6 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 require("./controllers/html-routes.js")(app);
 require("./controllers/api-routes.js")(app);
 
-
 // Syncing our sequelize models and then starting our express app
 db.sequelize.sync().then(function() {
 	app.listen(PORT, function() {

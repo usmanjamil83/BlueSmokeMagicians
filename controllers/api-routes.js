@@ -1,8 +1,14 @@
+
+// (((((((NEW CODE)))))))
+
 var express = require("express");
 var db = require("../models");
+
 var User = db.User;
+
 // TEMPORARY!!! REQUIRING LOCAL, HARD-CODED MATCHES IN sampleusers.js
 // var sampleusers = require("../db/sampleusers");
+
 
 module.exports = function(app) {
 
@@ -23,10 +29,12 @@ app.post("/api/users", function(req, res) {
     age: userData.age
   }).then(function(data) {
     res.json(data);
+
   });
 });
 
 // PUT route for updating user info
+
 app.put("/api/users/:id", function(req, res) {
   db.User.update(
     req.body,
@@ -48,7 +56,9 @@ app.put("/api/users/:id", function(req, res) {
     }).then(function(user) {
       res.json(user);
     });
+
   });
+});
 
   // TEMPORARY!!! FINDING ALL LOCAL, HARD-CODED MATCHES IN sampleusers.js
   // Find all the matches
