@@ -1,83 +1,113 @@
-var friendsResponseArray = [{
+var sampleUsersArray = [{
     "name": "Halle",
-    "photo": "http://i.dailymail.co.uk/i/pix/2015/08/18/09/2B74009E00000578-3201718-image-a-2_1439885890058.jpg",
     "responseObj": [
-      "5",
-      "5",
-      "5",
-      "5",
-      "5",
-      "5",
-      "5",
-      "5",
-      "5",
-      "5"
+      "PC",
+      "iOS",
+      "React",
+      "mySQL",
+      "Node.js",
+      "Front-End"
     ]
   },
   {
     "name": "Meagan Good",
-    "photo": "http://www.indiewire.com/wp-content/uploads/2015/02/meagan-good.jpg",
     "responseObj": [
-      "2",
-      "2",
-      "2",
-      "2",
-      "3",
-      "2",
-      "2",
-      "2",
-      "2",
-      "2"
+      "Mac",
+      "Android",
+      "Angular",
+      "Sequelize",
+      "PHP",
+      "Back-End"
     ]
   },
   {
     "name": "Penelope",
-    "photo": "http://eluxemagazine.com/wp-content/uploads/2015/06/Pene%CC%81lope_Cruz_-_Cannes_2011.jpg",
     "responseObj": [
-      "4",
-      "4",
-      "4",
-      "4",
-      "4",
-      "4",
-      "4",
-      "4",
-      "4",
-      "4"
+      "PC",
+      "Android",
+      "React",
+      "Sequelize",
+      "Node.js",
+      "Back-End"
     ]
   },
   {
     "name": "Beyonce",
-    "photo": "http://hellobaby.hu/wp-content/uploads/2017/02/1-4.jpg",
     "responseObj": [
-      "3",
-      "3",
-      "3",
-      "3",
-      "3",
-      "3",
-      "3",
-      "3",
-      "3",
-      "3"
+      "Mac",
+      "iOS",
+      "Angular",
+      "mySQL",
+      "PHP",
+      "Front-End"
     ]
   },
   {
     "name": "Monica Bellucci",
-    "photo": "http://unitedbloggers.no/uploads/sites/623/2016/12/monica.png",
     "responseObj": [
-      "1",
-      "1",
-      "1",
-      "1",
-      "1",
-      "1",
-      "1",
-      "1",
-      "1",
-      "1"
+      "Mac",
+      "Android",
+      "Angular",
+      "mySQL",
+      "PHP",
+      "Front-End"
     ]
-  }
+  },
+  {
+      "name": "Halle",
+      "responseObj": [
+        "PC",
+        "iOS",
+        "React",
+        "mySQL",
+        "Node.js",
+        "Front-End"
+      ]
+    },
+    {
+      "name": "Meagan Good",
+      "responseObj": [
+        "Mac",
+        "Android",
+        "Angular",
+        "Sequelize",
+        "PHP",
+        "Back-End"
+      ]
+    },
+    {
+      "name": "Penelope",
+      "responseObj": [
+        "PC",
+        "Android",
+        "React",
+        "Sequelize",
+        "Node.js",
+        "Back-End"
+      ]
+    },
+    {
+      "name": "Beyonce",
+      "responseObj": [
+        "Mac",
+        "iOS",
+        "Angular",
+        "mySQL",
+        "PHP",
+        "Front-End"
+      ]
+    },
+    {
+      "name": "Monica Bellucci",
+      "responseObj": [
+        "Mac",
+        "Android",
+        "Angular",
+        "mySQL",
+        "PHP",
+        "Front-End"
+      ]
+    }
 ];
 
-module.exports = friendsResponseArray;
+module.exports = sampleUsersArray;
