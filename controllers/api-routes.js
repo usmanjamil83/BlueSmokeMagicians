@@ -1,6 +1,9 @@
 var express = require("express");
 var db = require("../models");
 
+// TEMPORARY!!! REQUIRING LOCAL, HARD-CODED MATCHES IN sampleusers.js
+var sampleusers = require("../db/sampleusers");
+
 module.exports = function(app) {
 
 // POST route for saving new user info
@@ -33,4 +36,11 @@ app.put("/api/users/:id", function(req, res) {
       res.json(result);
     });
   });
+
+  // TEMPORARY!!! FINDING ALL LOCAL, HARD-CODED MATCHES IN sampleusers.js
+  // Find all the matches
+  app.get("/api/users", function(req, res) {
+    res.json(sampleusers);
+  });
+
 };

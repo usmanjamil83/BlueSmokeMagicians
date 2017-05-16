@@ -26,74 +26,81 @@
             <p class="center-align header" id="contactSubheader">Tell the world about #You</p>
           </div>
         </div>
+        <!-- Code below is a form for the user questions -->
         <div class="row">
-          <form action="#">
+          <form action="#" id="questionForm">
+            <!-- Temporary form field for name...using for testing -->
+            <div class="input-field">
+              <input placeholder="Enter First Name" id="first_name" type="text" class="validate">
+              <label for="first_name"></label>
+            </div>
+            <!-- End of code for temp form field -->
             <img class="questionImage" src="./assets/img/pc_mac.png" alt="Comparison Picture">
             <p>
-              <input class="with-gap questionButtons" name="question1" type="radio" id="response1_1" />
+              <input class="with-gap questionButtons" name="question1" type="radio" id="response1_1" value="PC"/>
               <label for="response1_1">PC</label>
             </p>
             <p>
-              <input class="with-gap questionButtons" name="question1" type="radio" id="response1_2" />
+              <input class="with-gap questionButtons" name="question1" type="radio" id="response1_2" value="Mac"/>
               <label for="response1_2">Mac</label>
             </p>
             <hr noshade>
 
             <img class="questionImage" src="./assets/img/ios_andriod.png" alt="Comparison Picture">
             <p>
-              <input class="with-gap questionButtons" name="question2" type="radio" id="response2_1" />
+              <input class="with-gap questionButtons" name="question2" type="radio" id="response2_1" value="iOS"/>
               <label for="response2_1">iOS</label>
             </p>
             <p>
-              <input class="with-gap questionButtons" name="question2" type="radio" id="response2_2" />
+              <input class="with-gap questionButtons" name="question2" type="radio" id="response2_2" value="Android"/>
               <label for="response2_2">Android</label>
             </p>
             <hr noshade>
 
             <img class="questionImage" src="./assets/img/angular_react.png" alt="Comparison Picture">
             <p>
-              <input class="with-gap questionButtons" name="question3" type="radio" id="response3_1" />
+              <input class="with-gap questionButtons" name="question3" type="radio" id="response3_1" value="React"/>
               <label for="response3_1">React</label>
             </p>
             <p>
-              <input class="with-gap questionButtons" name="question3" type="radio" id="response3_2" />
+              <input class="with-gap questionButtons" name="question3" type="radio" id="response3_2" value="Angular"/>
               <label for="response3_2">Angular</label>
             </p>
             <hr noshade>
 
             <img class="questionImage" src="./assets/img/mysql_sequelize.png" alt="Comparison Picture">
             <p>
-              <input class="with-gap questionButtons" name="question4" type="radio" id="response4_1" />
+              <input class="with-gap questionButtons" name="question4" type="radio" id="response4_1" value="mySQL"/>
               <label for="response4_1">mySQL</label>
             </p>
             <p>
-              <input class="with-gap questionButtons" name="question4" type="radio" id="response4_2" />
+              <input class="with-gap questionButtons" name="question4" type="radio" id="response4_2" value="Sequelize"/>
               <label for="response4_2">Sequelize</label>
             </p>
             <hr noshade>
 
             <img class="questionImage" src="./assets/img/node_php.png" alt="Comparison Picture">
             <p>
-              <input class="with-gap questionButtons" name="question5" type="radio" id="response5_1" />
+              <input class="with-gap questionButtons" name="question5" type="radio" id="response5_1" value="Node.js"/>
               <label for="response5_1">Node.js</label>
             </p>
             <p>
-              <input class="with-gap questionButtons" name="question5" type="radio" id="response5_2" />
+              <input class="with-gap questionButtons" name="question5" type="radio" id="response5_2" value="PHP"/>
               <label for="response5_2">PHP</label>
             </p>
             <hr noshade>
 
             <img class="questionImage" src="./assets/img/front_back.png" alt="Comparison Picture">
             <p>
-              <input class="with-gap questionButtons" name="question6" type="radio" id="response6_1" />
+              <input class="with-gap questionButtons" name="question6" type="radio" id="response6_1" value="Front-End"/>
               <label for="response6_1">Front-End</label>
             </p>
             <p>
-              <input class="with-gap questionButtons" name="question6" type="radio" id="response6_2" />
+              <input class="with-gap questionButtons" name="question6" type="radio" id="response6_2" value="Back-End"/>
               <label for="response6_2">Back-End</label>
             </p>
             <hr noshade>
-            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <button class="btn waves-effect waves-light" type="submit" id="submit" name="action">Submit
               <!-- <i class="material-icons right">send</i> -->
             </button>
           </form>

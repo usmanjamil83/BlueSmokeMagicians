@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "chrisa8300@gmail.com",
+    "password": "marvin",
     "database": "gitup_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "marvin",
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
