@@ -1,15 +1,28 @@
 var express = require("express");
 var db = require("../models");
-
+var User = db.User;
 // TEMPORARY!!! REQUIRING LOCAL, HARD-CODED MATCHES IN sampleusers.js
-var sampleusers = require("../db/sampleusers");
+// var sampleusers = require("../db/sampleusers");
 
 module.exports = function(app) {
 
+app.get("/api/users", function(req, res) {
+    db.User.findAll({}).then(function(users) {
+    res.json(users);
+  });
+});
+
 // POST route for saving new user info
 app.post("/api/users", function(req, res) {
-  db.User.create(req.body).then(function(result) {
-    res.json(result);
+  var userData = req.body;
+
+  db.User.create({
+    name: userData.name,
+    quote: userData.quote,
+    gender: userData.gender,
+    age: userData.age
+  }).then(function(data) {
+    res.json(data);
   });
 });
 
@@ -32,15 +45,13 @@ app.put("/api/users/:id", function(req, res) {
       where: {
         match: req.params.match
       }
-    }).then(function(result) {
-      res.json(result);
+    }).then(function(user) {
+      res.json(user);
     });
   });
 
   // TEMPORARY!!! FINDING ALL LOCAL, HARD-CODED MATCHES IN sampleusers.js
   // Find all the matches
-  app.get("/api/users", function(req, res) {
-    res.json(sampleusers);
-  });
+
 
 };
