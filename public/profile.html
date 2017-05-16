@@ -35,48 +35,48 @@
       <a href="#" data-activates="slide-out" class="button-collapse"><i class="medium material-icons teal-text text-lighten-2">menu</i></a>
       </div>
       <div class="container">
-         <form action="/api/users" method="POST" class="col s12">
-            <div class="img_container">
-               <div class="row">
-                  <div class="col s12 center-align img_text">
-                     Photo
-                     <div class="input-field inline center-align">
-                        <input id="img" class="file-path validate" type="file" onchange="previewFile()" placeholder="Upload file">
-                        <label for="photo" data-error="wrong" data-success="right"></label>
-                     </div>
+      <form action="/api/users" method="POST" class="col s12">
+         <div class="img_container">
+            <div class="row">
+               <div class="col s12 center-align img_text">
+                  Photo
+                  <div class="input-field inline center-align">
+                     <input id="img" class="file-path validate" type="file" onchange="previewFile()" placeholder="Upload file">
+                     <label for="photo" data-error="wrong" data-success="right"></label>
                   </div>
                </div>
             </div>
+         </div>
+         <div class="row">
             <div class="row">
-               <div class="row">
-                  <div class="input-field col s12">
-                     <input placeholder="John Q Programmer" name="name" id="name" type="text" class="validate">
-                     <label for="first_name">Name</label>
-                  </div>
+               <div class="input-field col s12">
+                  <input placeholder="John Q Programmer" name="name" id="name" type="text" class="validate">
+                  <label for="first_name">Name</label>
                </div>
-               <div class="row">
-                  <div class="input-field col s12">
-                     <input placeholder="Peace, love, code" name="quote" id="quote" type="text" class="validate">
-                     <label for="quote">Quote</label>
-                  </div>
+            </div>
+            <div class="row">
+               <div class="input-field col s12">
+                  <input placeholder="Peace, love, code" name="quote" id="quote" type="text" class="validate">
+                  <label for="quote">Quote</label>
                </div>
-               <div class="row">
-                  <div class="input-field col s12">
-                     <input placeholder="27" id="age" name="age" type="number" class="validate">
-                     <label for="age">Age</label>
-                  </div>
+            </div>
+            <div class="row">
+               <div class="input-field col s12">
+                  <input placeholder="27" id="age" name="age" type="number" class="validate">
+                  <label for="age">Age</label>
                </div>
-                 <div class="row">
-                    <div class="input-field col s12">
-                       <input placeholder="Meh" id="gender" name="gender" type="text" class="validate">
-                       <label for="gender">Gender</label>
-                    </div>
+            </div>
+            <div class="row">
+               <div class="input-field col s12">
+                  <input placeholder="Meh" id="gender" name="gender" type="text" class="validate">
+                  <label for="gender">Gender</label>
+               </div>
                <div id="submit_btn" class="submit_btn inline center-align">
                   <button class="btn waves-effect waves-light" type="submit"  action="/api/users">Submit
                   </button>
                </div>
-         </form>
-         </div>
+      </form>
+      </div>
       </div>
       <script src="./assets/js/profile.js"></script>
    </body>
