@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 
     // Capture the form inputs
-    $("#submit_btn").on("click", function(e){
+    $(".submit_btn").on("click", function(e){
       e.preventDefault();
       // Form validation
     //   function validateForm() {
@@ -48,7 +48,7 @@ $(document).ready(function() {
         // // Grab the URL of the website
         // var currentURL = window.location.origin;
         // console.log("Endpoint: " + currentURL + "/api/users");
-      
+
         // $.post(currentURL + "/api/users", userData, function(data){
            $.post("/api/users", userData, function(data){
 
