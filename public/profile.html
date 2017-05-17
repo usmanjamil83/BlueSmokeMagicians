@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <script
-         src="https://code.jquery.com/jquery-3.2.1.js"
-         integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-         crossorigin="anonymous"></script>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- Compiled and minified JavaScript -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-      <!-- Materilaize -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-      <!-- Icons -->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link rel="stylesheet" href="./assets/css/profile.css">
-      <title>gitUp Profile</title>
-   </head>
-   <body>
-      <ul id="slide-out" class="side-nav">
-         <li>
-            <div class="userView">
-               <div class="inline center-align">
-                  <img class="nav_img inline center-align" src="assets/img/logo_txt_final.png">
-               </div>
-               <div>
-                  <!-- <a href="#!user"><img class="circle"></a> -->
-                  <!-- <a href="#!name"><span class="black-text name"></span>name</a> -->
-                  <a href="#!email"><span class="black-text name">name</span></a>
-               </div>
+<head>
+   <meta charset="UTF-8">
+   <script
+   src="https://code.jquery.com/jquery-3.2.1.js"
+   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+   crossorigin="anonymous"></script>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+   <!-- Materilaize -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+   <!-- Icons -->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link rel="stylesheet" href="./assets/css/profile.css">
+   <title>gitUp Profile</title>
+</head>
+<body>
+   <ul id="slide-out" class="side-nav">
+      <li>
+         <div class="userView">
+            <div class="inline center-align">
+               <img class="nav_img inline center-align" src="assets/img/logo_txt_final.png">
+            </div>
+            <div>
+               <!-- <a href="#!user"><img class="circle"></a> -->
+               <!-- <a href="#!name"><span class="black-text name"></span>name</a> -->
+               <a href="#!email"><span class="black-text name">name</span></a>
+            </div>
          </li>
          <li><a href="/">Home</a></li>
          <li><a href="/profile">Profile</a></li>
       </ul>
       <a href="#" data-activates="slide-out" class="button-collapse"><i class="medium material-icons teal-text text-lighten-2">menu</i></a>
-      </div>
-      <div class="container">
+   </div>
+   <div class="container">
       <form action="/api/users" method="POST" class="col s12">
          <div class="img_container">
             <div class="row">
@@ -71,21 +71,16 @@
                   <input placeholder="Meh" id="gender" name="gender" type="text" class="validate">
                   <label for="gender">Gender</label>
                </div>
-<<<<<<< HEAD
-               <div id="submit_btn" class="submit_btn inline center-align">
-                  <button class="btn waves-effect waves-light" type="submit">Submit
-                  </button>
-=======
+
                <a id="submit_btn" href="questions">
-               <div class="submit_btn inline center-align">
-                  <div class="btn waves-effect waves-light" type="submit">Submit
-                  </div>
-                </a>
->>>>>>> ccbb8c2ced6e423f4628b872c7cbeb432310c9b7
+                  <div class="submit_btn inline center-align">
+                     <div class="btn waves-effect waves-light" type="submit">Submit
+                     </div>
+                  </a>
                </div>
-      </form>
-      </div>
+            </form>
+         </div>
       </div>
       <script src="./assets/js/profile.js"></script>
    </body>
-</html>
+   </html>
