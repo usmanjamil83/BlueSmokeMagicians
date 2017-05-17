@@ -28,7 +28,7 @@ app.post("/api/users", function(req, res) {
     gender: userData.gender,
     age: userData.age
   }).then(function(data) {
-    res.json(data).redirect('/questions');
+    res.json(data);
 
   });
 });
