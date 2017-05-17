@@ -40,7 +40,7 @@ $(document).ready(function() {
           // image: $("#image").val(),
           age: $("#age").val()
         };
-        
+
         var chosen = $(".chosen-select");
         console.log(chosen.val() + "is logged");
         console.log(userData);
@@ -48,7 +48,7 @@ $(document).ready(function() {
         // // Grab the URL of the website
         // var currentURL = window.location.origin;
         // console.log("Endpoint: " + currentURL + "/api/users");
-        // AJAX post the data to the friends API.
+      
         // $.post(currentURL + "/api/users", userData, function(data){
            $.post("/api/users", userData, function(data){
 
