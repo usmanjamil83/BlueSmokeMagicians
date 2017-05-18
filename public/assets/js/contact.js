@@ -14,3 +14,20 @@ console.log(slicedSearchString);
 
 //Code below will write user info onto the package
 $("#userNameCard").html("User [" + slicedSearchString + "]");
+
+// socket.io chat js
+
+$(function () {
+	var socket = io();
+	$('form').submit(function(){
+		socket.emit('chat message', $('#m').val());
+		$('#m').val('');
+		return false;
+	});
+	socket.on('chat message', function(msg){
+		$('#messages').append($('<li>').text(msg));
+		window.scrollTo(0, document.body.scrollHeight);
+	});
+});
+
+// socket.io chat js

@@ -1,5 +1,7 @@
 //Blue Smoke Magicians server setup
 var express = require("express");
+var http = require('http').Server(express);
+var io = require('socket.io')(http);
 var bodyParser = require("body-parser");
 // Requiring our models for syncing
 var db = require("./models");
@@ -23,6 +25,13 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // Routes
 require("./controllers/html-routes.js")(app);
 require("./controllers/api-routes.js")(app);
+
+
+io.on('connection', function(socket){
+	socket.on('chat message', function(msg){
+		io.emit('chat message', msg);
+	});
+});
 
 // Syncing our sequelize models and then starting our express app
 db.sequelize.sync().then(function() {
