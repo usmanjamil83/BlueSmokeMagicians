@@ -14,31 +14,24 @@
 	<title>gitUp Profile</title>
 </head>
 <body>
-	<ul class="side-nav" id="slide-out">
-		<li>
-			<div class="userView">
-				<div class="inline center-align"><img class="nav_img inline center-align" src="assets/img/logo_txt_final.png"></div>
-			</div>
-		</li>
-		<li>
-			<a href="/">Home</a>
-		</li>
-		<li>
-			<a href="/profile">Profile</a>
-		</li>
-	</ul><a class="button-collapse" data-activates="slide-out" href="#"><i class="medium material-icons teal-text text-lighten-2">menu</i></a>
+	
 	<div class="container">
 		<form action="/api/users" class="col s12" method="post">
 			<div class="img_container" id="myPhotoDiv">
 				<div class="row">
 					<div class="col s12 center-align img_text">
 						<div class="input-field inline center-align">
-							<label data-error="wrong" data-success="right" for="photo"></label>
+							 <label data-error="wrong" data-success="right" for="photo"></label>
 						</div>
 					</div>
 				</div>
 			</div>
-			<input class="file-path validate center-block" id="uploadedPhoto" placeholder="Upload file" type="file">
+			<div class="row">
+			<div class="col s12 inline center-align">
+			<input class="file-path validate center-block" id="uploadedPhoto" type="file"/>
+			<div>image must be under 50kb</div>
+		</div>
+		</div>
 			<div class="row">
 				<div class="row">
 					<div class="input-field col s12">
@@ -59,14 +52,15 @@
 					<div class="input-field col s12">
 						<input class="validate" id="gender" name="gender" placeholder="Meh" type="text"> <label for="gender">Gender</label>
 					</div>
-
 				</div>
-				<a href="questions.html" id="questions-link">
-					<div class="submit_btn inline center-align">
-						<div class="btn waves-effect waves-light">
-							Submit
-						</div>
-					</div></a>
+				<div class="row">
+					<div class="input-field col s12">
+						<a href="questions" id="questions-link">
+							<div class="btn waves-effect waves-light submit_btn">
+								Submit
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
 		</form>
