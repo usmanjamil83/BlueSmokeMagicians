@@ -14,7 +14,7 @@ $(document).ready(function() {
                 imgContent = reader.result;
                 document.getElementById('myPhotoDiv').style.backgroundImage = "url(" + imgContent + ")";
             }, false);
-            reader.readAsDataURL(input.files[0]);
+            reader.readAsDataURL(input.files[0]); 
         }
     }
 
