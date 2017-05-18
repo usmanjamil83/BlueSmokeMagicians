@@ -2,6 +2,7 @@
 // (((((((NEW CODE)))))))
 
 var express = require("express");
+var bodyParser = require("body-parser");
 var db = require("../models");
 
 var User = db.User;
@@ -9,8 +10,10 @@ var User = db.User;
 // TEMPORARY!!! REQUIRING LOCAL, HARD-CODED MATCHES IN sampleusers.js
 // var sampleusers = require("../db/sampleusers");
 
-
 module.exports = function(app) {
+
+  app.use(bodyParser.json({limit: '50mb'}));
+  app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
 app.get("/api/users", function(req, res) {
     db.User.findAll({}).then(function(users) {
@@ -21,12 +24,14 @@ app.get("/api/users", function(req, res) {
 // POST route for saving new user info
 app.post("/api/users", function(req, res) {
   var userData = req.body;
+  console.log(userData);
 
   db.User.create({
     name: userData.name,
     quote: userData.quote,
     gender: userData.gender,
-    age: userData.age
+    age: userData.age,
+    image: userData.image
   }).then(function(data) {
     res.json(data);
 

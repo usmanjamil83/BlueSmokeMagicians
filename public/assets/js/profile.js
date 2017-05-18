@@ -6,11 +6,13 @@ $(document).ready(function() {
     // Initialize collapsible (uncomment the line below if you use the dropdown variation)
     $('.collapsible').collapsible();
 
+    var imgContent = "";
     function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
             reader.addEventListener("load", function() {
-                document.getElementById('myPhotoDiv').style.backgroundImage = "url(" + reader.result + ")";
+                imgContent = reader.result;
+                document.getElementById('myPhotoDiv').style.backgroundImage = "url(" + imgContent + ")";
             }, false);
             reader.readAsDataURL(input.files[0]);
         }
@@ -29,7 +31,7 @@ $(document).ready(function() {
             name: $("#name").val(),
             quote: $("#quote").val(),
             gender: $("#gender").val(),
-            image: $("#image").val(),
+            image: imgContent,
             age: $("#age").val()
         };
 
