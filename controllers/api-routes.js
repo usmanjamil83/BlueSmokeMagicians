@@ -12,10 +12,10 @@ module.exports = function(app) {
   app.use(bodyParser.json({limit: '50mb'}));
   app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
-app.get("/api/users", function(req, res) {
+app.get("/api/users", function(req, res, next) {
     db.User.findAll({}).then(function(users) {
     res.json(users);
-  });
+  }).catch(next);
 });
 
 // POST route for saving new user info

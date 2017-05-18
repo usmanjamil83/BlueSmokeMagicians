@@ -1,6 +1,6 @@
 //Blue Smoke Magicians server setup
 var express = require("express");
-var http = require('http').Server(express);
+var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var bodyParser = require("body-parser");
 // Requiring our models for syncing
@@ -34,8 +34,8 @@ io.on('connection', function(socket){
 });
 
 // Syncing our sequelize models and then starting our express app
-db.sequelize.sync().then(function() {
-	app.listen(PORT, function() {
+db.sequelize.sync({force: true}).then(function() {
+	http.listen(PORT, function() {
 		console.log("App listening on PORT " + PORT);
 	});
 });
