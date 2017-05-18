@@ -38,7 +38,7 @@ module.exports = function(sequelize, DataTypes) {
       //   isAlphanumeric: true,
       //   len: [2, 100],
       // }
-    }
+    },
     // image: {
     //   //change dt to string to store file path instead?
     //   type: DataTypes.STRING,
@@ -48,6 +48,16 @@ module.exports = function(sequelize, DataTypes) {
     //   //     //does extra data need to be added here?
     //   //   }
     //   }
+    image: {
+      type: DataTypes.BLOB
+      // validate: {
+      //   isAlpha: true,
+      //   notNull: true,
+      //   //do we need this as well?
+      //   notEmpty: true,
+      //   len: [2, 25]
+      // }
+    }
     });
   return User;
 };
