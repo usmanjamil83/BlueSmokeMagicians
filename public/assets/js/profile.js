@@ -1,72 +1,44 @@
 $(document).ready(function() {
-  $('select').material_select();
+    $('select').material_select();
 
-  // Initialize collapse button
-  $(".button-collapse").sideNav();
-  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-  $('.collapsible').collapsible();
+    // Initialize collapse button
+    $(".button-collapse").sideNav();
+    // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+    $('.collapsible').collapsible();
 
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.addEventListener("load", function() {
+                document.getElementById('myPhotoDiv').style.backgroundImage = "url(" + reader.result + ")";
+            }, false);
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
 
+    $("#uploadedPhoto").change(function() {
+        readURL(this);
+    });
 
     // Capture the form inputs
-    $(".submit_btn").on("click", function(e){
-      e.preventDefault();
-      // Form validation
-    //   function validateForm() {
-    //   var isValid = true;
-    //   // $('.validate').each(function() {
-    //   //   if ( $(this).val() === '' )
-    //   //       console.log('Did not populate: ' + $(this));
-    //   //       isValid = false;
-    //   // });
+    $("#questions-link").on("click", function(e) {
+        e.preventDefault();
 
-    //   $('.chosen-select').each(function() {
-
-    //     if( $(this).val() === undefined)
-    //       isValid = true;
-    //   });
-    //   return isValid;
-    // }
-
-    // If all required fields are filled
-    // if (validateForm() === true)
-    // {
-      // Create an object for the user's data
+        // Create an object for the user's data
         var userData = {
-          // img: $("img"),
-          name: $("#name").val(),
-          quote: $("#quote").val(),
-          gender: $("#gender").val(),
-          // image: $("#image").val(),
-          age: $("#age").val()
+            name: $("#name").val(),
+            quote: $("#quote").val(),
+            gender: $("#gender").val(),
+            image: $("#image").val(),
+            age: $("#age").val()
         };
 
         var chosen = $(".chosen-select");
         console.log(chosen.val() + "is logged");
         console.log(userData);
 
-        // // Grab the URL of the website
-        // var currentURL = window.location.origin;
-        // console.log("Endpoint: " + currentURL + "/api/users");
-
-        // $.post(currentURL + "/api/users", userData, function(data){
-           $.post("/api/users", userData, function(data){
-
-          console.log("dbnvfata: " + data.name);
-          // $("#name").text(data.name);
-          // $('#name').attr("src", data.image);
-
-
-
+        $.post("/api/users", userData, function(data) {
+            window.location = "questions.html?id=" + data.id + "&name=" + data.name;
         });
-    // }
-    // else
-    // {
-    //   alert("Please fill out all fields before submitting!");
-    // }
-
-      // return false;
     });
-
-
 });
