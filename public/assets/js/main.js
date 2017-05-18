@@ -12,7 +12,7 @@ $("#tinderslide").jTinder({
 	// like callback
     onLike: function (item) {
 
-			window.location.replace("../public/contact.html"+"?"+item[0].id);
+			window.location.replace("../contact"+"?"+item[0].id);
 			console.log(item);
 			console.log(item[0].id);
 
