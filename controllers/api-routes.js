@@ -1,3 +1,5 @@
+// (((((((NEW CODE)))))))
+
 var express = require("express");
 var bodyParser = require("body-parser");
 var db = require("../models");
@@ -35,31 +37,57 @@ app.post("/api/users", function(req, res) {
   });
 });
 
-// PUT route for updating user info
+// // PUT route for updating user info
+//
+// app.put("/api/users", function(req, res) {
+//   db.User.update(
+//     req.body,
+//     {
+//       where: {
+//         id: req.body.id
+//       }
+//     }).then(function(result) {
+//       res.json(result);
+//     });
+//   });
 
-app.put("/api/users/:id", function(req, res) {
-  db.User.update(
-    req.body,
+  // PUT route for updating posts
+  app.put("/api/users", function(req, res) {
+  db.User.update(req.body,
     {
       where: {
         id: req.body.id
       }
-    }).then(function(result) {
-      res.json(result);
-    });
+    })
+  .then(function(answerObject) {
+    res.json(answerObject);
+  });
   });
 
-  // Find all the matches
-  app.get("/api/users/:match", function(req, res) {
-    db.Users.findOne({
+
+  // Find specific id
+  app.get("/api/users/:id", function(req, res) {
+    db.User.findOne({
       where: {
-        match: req.params.match
+        id: req.params.id
       }
     }).then(function(user) {
       res.json(user);
     });
 
   });
+
+
+  // // Find all the matches
+  // app.get("/api/users/:match", function(req, res) {
+  //   db.Users.findOne({
+  //     where: {
+  //       match: req.params.match
+  //     }
+  //   }).then(function(user) {
+  //     res.json(user);
+  //   });
+  // });
 
 
   // TEMPORARY!!! FINDING ALL LOCAL, HARD-CODED MATCHES IN sampleusers.js
