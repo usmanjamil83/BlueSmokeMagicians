@@ -14,7 +14,7 @@ $(document).ready(function() {
                 imgContent = reader.result;
                 document.getElementById('myPhotoDiv').style.backgroundImage = "url(" + imgContent + ")";
             }, false);
-            reader.readAsDataURL(input.files[0]); 
+            reader.readAsDataURL(input.files[0]);
         }
     }
 
@@ -34,10 +34,6 @@ $(document).ready(function() {
             image: imgContent,
             age: $("#age").val()
         };
-
-        var chosen = $(".chosen-select");
-        console.log(chosen.val() + "is logged");
-        console.log(userData);
 
         $.post("/api/users", userData, function(data) {
             window.location = "questions.html?id=" + data.id + "&name=" + data.name;
