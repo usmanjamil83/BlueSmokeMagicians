@@ -14,7 +14,7 @@ module.exports = function(app) {
 app.get("/api/users", function(req, res) {
     db.User.findAll({
       order: [
-            ['matchpoints', 'ASC']
+            ['matchpoints', 'DESC']
         ]
     }).then(function(users) {
     res.json(users);
@@ -84,6 +84,19 @@ app.post("/api/users", function(req, res) {
     });
 
   });
+
+  // Find specific name
+  app.get("/api/users/:name", function(req, res) {
+    db.User.findAll({
+      where: {
+        name: req.body.name
+      }
+    }).then(function(users) {
+      res.json(users);
+    });
+
+  });
+
 
 
   // // Find all the matches
