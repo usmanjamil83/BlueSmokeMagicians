@@ -119,16 +119,10 @@ module.exports = function(sequelize, DataTypes) {
       // }
     },
     matchpoints: {
-      type: DataTypes.INTEGER
-      // validate: {
-      //   len: [2],
-      //   min: 18,
-      //   max: 99,
-      //   isAlpha: false,
-      //   notNull: true,
-      //   notEmpty: true
-      // }
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false
     }
-    });
+  });
   return User;
 };

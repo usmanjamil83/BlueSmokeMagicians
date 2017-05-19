@@ -27,10 +27,17 @@ app.post("/api/users", function(req, res) {
 
   db.User.create({
     name: userData.name,
-    quote: userData.quote,
-    gender: userData.gender,
     age: userData.age,
-    image: userData.image
+    gender: userData.gender,
+    quote: userData.quote,
+    image: userData.image,
+    answer1: userData.answer1,
+    answer2: userData.answer2,
+    answer3: userData.answer3,
+    answer4: userData.answer4,
+    answer5: userData.answer5,
+    answer6: userData.answer6,
+    matchpoints: userData.matchpoints,
   }).then(function(data) {
     res.json(data);
 
