@@ -1,6 +1,15 @@
+
+form{
+  padding-top: 20px;
+}
+
+.brand-logo{
+margin-left: 10px;  
+}
+
 .catopus{
-  width: 90px;
-  height: 90px;
+  width: 67px;
+  height: 67px;
 }
 
 .img_container{
@@ -21,4 +30,8 @@
 
 .form_text{
   font-size: 16px;
+}
+
+.foot{
+  color: gray;
 }

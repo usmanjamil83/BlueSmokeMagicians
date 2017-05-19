@@ -3,7 +3,7 @@
 
 
     "username": "root",
-    "password": "marvin",
+    "password": "",
 
     "database": "gitup_db",
     "host": "127.0.0.1",
