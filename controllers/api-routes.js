@@ -1,4 +1,4 @@
-// (((((((NEW CODE)))))))
+//combined with marvin
 
 var express = require("express");
 var bodyParser = require("body-parser");
@@ -6,16 +6,17 @@ var db = require("../models");
 
 var User = db.User;
 
-// TEMPORARY!!! REQUIRING LOCAL, HARD-CODED MATCHES IN sampleusers.js
-// var sampleusers = require("../db/sampleusers");
-
 module.exports = function(app) {
 
   app.use(bodyParser.json({limit: '50mb'}));
   app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
 app.get("/api/users", function(req, res) {
-    db.User.findAll({}).then(function(users) {
+    db.User.findAll({
+      order: [
+            ['matchpoints', 'DESC']
+        ]
+    }).then(function(users) {
     res.json(users);
   });
 });
@@ -72,33 +73,7 @@ app.post("/api/users", function(req, res) {
   });
 
 
-  // Find specific id
-  app.get("/api/users/:id", function(req, res) {
-    db.User.findOne({
-      where: {
-        id: req.params.id
-      }
-    }).then(function(user) {
-      res.json(user);
-    });
-
-  });
-
-
-  // // Find all the matches
-  // app.get("/api/users/:match", function(req, res) {
-  //   db.Users.findOne({
-  //     where: {
-  //       match: req.params.match
-  //     }
-  //   }).then(function(user) {
-  //     res.json(user);
-  //   });
-  // });
-
-
-  // TEMPORARY!!! FINDING ALL LOCAL, HARD-CODED MATCHES IN sampleusers.js
-  // Find all the matches
-
 
 };
+
+
