@@ -69,12 +69,6 @@ app.post("/api/users", function(req, res) {
     })
   .then(function(answerObject) {
     res.json(answerObject);
-<<<<<<< Updated upstream
-  });
-  });
-
-
-=======
   });
   });
 
@@ -107,8 +101,5 @@ app.post("/api/users", function(req, res) {
   // TEMPORARY!!! FINDING ALL LOCAL, HARD-CODED MATCHES IN sampleusers.js
   // Find all the matches
 
->>>>>>> Stashed changes
 
 };
-
-
