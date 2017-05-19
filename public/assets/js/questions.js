@@ -93,8 +93,6 @@ $(document).ready(function() {
         getAllUserData();
       });
     }
-    window.location.replace("../swipe"+"?"+answerObject.id);
-
     });
     // ____________________________________________________________________________ End of on click
 
@@ -158,6 +156,7 @@ $(document).ready(function() {
           addMatchPoints(addPoints);
 
         }
+        nextPage();
       }
     // }
 
@@ -183,6 +182,10 @@ $(document).ready(function() {
         console.log("Add Points Happened");
       });
 
+    }
+
+    function nextPage() {
+      window.location = "swipe.html?id=" + idOnly;
     }
 
 

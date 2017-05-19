@@ -1,3 +1,37 @@
+//Code below grabs the URL and extracts the search value that contains user id
+var parser = document.createElement('a');
+parser.href = window.location.href;
+
+//Code below parses our the splices out just the search term
+var searchString = parser.search;
+var slicedSearchString = searchString.slice(1);
+var idOnly = searchString.slice(4);
+
+getUserData(idOnly);
+
+// Code below pulls in the user's information from the sql database
+function getUserData(idOnly) {
+$.get("/api/users/" + idOnly, function(newUserData) {
+	if (newUserData) {
+		// If this post exists, prefill our cms forms with its data
+		console.log(newUserData);
+		getAllUserData();
+	}
+});
+}
+
+// Code below pulls in their top matches
+function getAllUserData() {
+	$.get("/api/users", function(data) {
+		populatePanes(data);
+		console.log("Descent should be here");
+		console.log(data);
+	});
+}
+
+
+
+
 /**
  * jTinder initialization
  */
@@ -12,7 +46,7 @@ $("#tinderslide").jTinder({
 	// like callback
     onLike: function (item) {
 
-			window.location.replace("../contact"+"?"+item[0].id);
+			window.location("../contact"+"?"+item[0].id);
 			console.log(item);
 			console.log(item[0].id);
 
@@ -45,8 +79,10 @@ var imgArray = {};
 
 // Code below populates the match cards with the matched user's information.
 // It is written in a way to override the jTinder package's handling of this function in css
-function populatePanes() {
+function populatePanes(data) {
+	console.log(data);
 	for (var i = 1; i < 6; i++) {
+		console.log(data[i].name);
 		var paneId = "#paneId" + i;
 		var userInfo = "#userInfo" + i;
 		console.log(paneId);
@@ -54,7 +90,7 @@ function populatePanes() {
 
 		// This code adds the image to the pane
 		$(paneId).css(
-			{'background': 'url("../public/assets/img/pane/jobs_img.png") no-repeat scroll center center',
+			{'background': 'url("./assets/img/pane/marissa_sm.jpg") no-repeat scroll center center',
 			'background-size': 'cover',
 			'background-size': '50%',
 			'background-color': 'white'
@@ -64,9 +100,6 @@ function populatePanes() {
 		$(userInfo).css({
 			'background-color':'white'
 		});
-		$(userInfo).html("User Name<br>"+ "User Quote<br>"+"User Dev Preferences<br>");
+		$(userInfo).html(data[i].name);
 	}
 }
-
-// Run the function to populate panes on load
-populatePanes();
