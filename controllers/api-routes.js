@@ -69,10 +69,45 @@ app.post("/api/users", function(req, res) {
     })
   .then(function(answerObject) {
     res.json(answerObject);
+<<<<<<< Updated upstream
   });
   });
 
 
+=======
+  });
+  });
+
+
+  // Find specific id
+  app.get("/api/users/:id", function(req, res) {
+    db.User.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(user) {
+      res.json(user);
+    });
+
+  });
+
+
+  // // Find all the matches
+  // app.get("/api/users/:match", function(req, res) {
+  //   db.Users.findOne({
+  //     where: {
+  //       match: req.params.match
+  //     }
+  //   }).then(function(user) {
+  //     res.json(user);
+  //   });
+  // });
+
+
+  // TEMPORARY!!! FINDING ALL LOCAL, HARD-CODED MATCHES IN sampleusers.js
+  // Find all the matches
+
+>>>>>>> Stashed changes
 
 };
 

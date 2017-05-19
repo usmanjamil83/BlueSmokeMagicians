@@ -36,7 +36,7 @@ $(document).ready(function() {
         };
 
         $.post("/api/users", userData, function(data) {
-            window.location = "questions.html?id=" + data.id + "&name=" + data.name;
+            window.location = "questions.html?id=" + data.id + "#name=" + data.name;
         });
     });
 });
