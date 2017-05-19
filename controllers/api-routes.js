@@ -14,7 +14,7 @@ module.exports = function(app) {
 app.get("/api/users", function(req, res) {
     db.User.findAll({
       order: [
-            ['matchpoints', 'DESC']
+            ['matchpoints', 'ASC']
         ]
     }).then(function(users) {
     res.json(users);
