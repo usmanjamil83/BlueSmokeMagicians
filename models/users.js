@@ -132,4 +132,3 @@ module.exports = function(sequelize, DataTypes) {
     });
   return User;
 };
-1 Comment
