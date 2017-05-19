@@ -7,13 +7,13 @@ console.log(window.location.href);
 console.log(parser.search);
 
 //Code below parses our the splices out just the search term
-var searchString = parser.search;
-var slicedSearchString = searchString.slice(1);
-console.log(slicedSearchString);
+var searchName = parser.search;
+var slicedsearchName = searchName.slice(4);
+console.log(slicedsearchName);
 
 
 //Code below will write user info onto the package
-$("#userNameCard").html("User [" + slicedSearchString + "]");
+$("#userNameCard").html("User [" + slicedsearchName + "]");
 
 // socket.io chat js
 
