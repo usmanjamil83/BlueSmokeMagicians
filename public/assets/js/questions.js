@@ -93,6 +93,8 @@ $(document).ready(function() {
         getAllUserData();
       });
     }
+    window.location.replace("../swipe"+"?"+answerObject.id);
+
     });
     // ____________________________________________________________________________ End of on click
 

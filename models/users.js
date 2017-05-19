@@ -16,7 +16,6 @@ module.exports = function(sequelize, DataTypes) {
     },
     image: {
       type: DataTypes.BLOB
-<<<<<<< Updated upstream
     },
     answer1: {
       type: DataTypes.STRING
@@ -38,86 +37,6 @@ module.exports = function(sequelize, DataTypes) {
     },
     matchpoints: {
       type: DataTypes.INTEGER
-=======
-      // validate: {
-      //   isAlpha: true,
-      //   notNull: true,
-      //   //do we need this as well?
-      //   notEmpty: true,
-      //   len: [2, 25]
-      // }
-    },
-    answer1: {
-      type: DataTypes.STRING
-      // validate: {
-      //   isAlpha: true,
-      //   notNull: true,
-      //   //do we need this as well?
-      //   notEmpty: true,
-      //   len: [2, 25]
-      // }
-    },
-    answer2: {
-      type: DataTypes.STRING
-      // validate: {
-      //   isAlpha: true,
-      //   notNull: true,
-      //   //do we need this as well?
-      //   notEmpty: true,
-      //   len: [2, 25]
-      // }
-    },
-    answer3: {
-      type: DataTypes.STRING
-      // validate: {
-      //   isAlpha: true,
-      //   notNull: true,
-      //   //do we need this as well?
-      //   notEmpty: true,
-      //   len: [2, 25]
-      // }
-    },
-    answer4: {
-      type: DataTypes.STRING
-      // validate: {
-      //   isAlpha: true,
-      //   notNull: true,
-      //   //do we need this as well?
-      //   notEmpty: true,
-      //   len: [2, 25]
-      // }
-    },
-    answer5: {
-      type: DataTypes.STRING
-      // validate: {
-      //   isAlpha: true,
-      //   notNull: true,
-      //   //do we need this as well?
-      //   notEmpty: true,
-      //   len: [2, 25]
-      // }
-    },
-    answer6: {
-      type: DataTypes.STRING
-      // validate: {
-      //   isAlpha: true,
-      //   notNull: true,
-      //   //do we need this as well?
-      //   notEmpty: true,
-      //   len: [2, 25]
-      // }
-    },
-    matchpoints: {
-      type: DataTypes.INTEGER
-      // validate: {
-      //   len: [2],
-      //   min: 18,
-      //   max: 99,
-      //   isAlpha: false,
-      //   notNull: true,
-      //   notEmpty: true
-      // }
->>>>>>> Stashed changes
     }
     });
   return User;
