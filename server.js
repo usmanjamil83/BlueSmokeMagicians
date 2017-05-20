@@ -9,7 +9,7 @@ var db = require("./models");
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 443;
 
 var io = require('socket.io').listen(app.listen(PORT));
 app.use(express.static(process.cwd() + "/public"));
