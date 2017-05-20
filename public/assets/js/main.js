@@ -14,6 +14,7 @@ $(document).ready(function() {
 	// Code below pulls in the user's information from the sql database
 	function getUserData(idOnly) {
 	$.get("/api/users/" + idOnly, function(newUserData) {
+		console.log("Getting user data.");
 		if (newUserData) {
 			// If this post exists, prefill our cms forms with its data
 			console.log(newUserData);
@@ -25,8 +26,9 @@ $(document).ready(function() {
 	// Code below pulls in their top matches
 	function getAllUserData() {
 		$.get("/api/users", function(data) {
+			console.log("Populating panes");
 			populatePanes(data);
-			console.log("Descent should be here");
+			console.log("Panes populated");
 			console.log(data);
 		});
 	}
@@ -92,22 +94,25 @@ $(document).ready(function() {
 	// Code below populates the match cards with the matched user's information.
 	// It is written in a way to override the jTinder package's handling of this function in css
 	function populatePanes(data) {
-		console.log(data);
-		for (var i = 1; i < 6; i++) {
-			console.log(data[i].name);
-			var paneId = "#paneId" + i;
+		console.log("Data: " + data);
+		var numUsers = 6;
+		if (data.length < 6) {
+			numUsers = data.length;
+		}
+
+		for (var i = 0; i < numUsers; i++) {
+			console.log("Data.name: " + data[i].name);
+			var paneId = "#paneId";
 			var userInfo = "#userInfo" + i;
 			console.log(paneId);
 			console.log(userInfo);
+			console.log("imageUrl: " + data[i].image.data);
 
-			// This code adds the image to the pane
-			$(paneId).css(
-				{'background': imgArray[i],
-				'background-size': 'cover',
-				'background-size': '50%',
-				'background-color': 'white'
-				}
-			);
+			$(paneId + i + "Image").attr( 'src', data[i].image);
+
+			$(paneId + i).css('background-image: url(' + data[i].image + ')');
+
+
 			// This code adds the user info to the pane
 			$(userInfo).css({
 				'background-color':'white'

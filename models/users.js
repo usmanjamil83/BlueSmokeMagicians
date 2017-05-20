@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: "Let's git up!"
     },
     image: {
-      type: DataTypes.BLOB
+      type: DataTypes.TEXT
     },
     answer1: {
       type: DataTypes.STRING
