@@ -2,6 +2,15 @@
   color: #ee6e73;
 }
 
+.brand-logo{
+  margin-left: 10px;  
+}
+
+.catopus{
+  width: 67px;
+  height: 67px;
+}
+
 .header {
   color: #607d8b;
 }
@@ -22,5 +31,5 @@
 }
 
 hr {
-    
+  
 }
