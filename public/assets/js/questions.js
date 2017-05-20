@@ -41,13 +41,13 @@ $(document).ready(function() {
 
   // Code below pulls in the user's information from the sql database
   function getUserData(idOnly) {
-  $.get("/api/users/" + idOnly, function(newUserData) {
-    if (newUserData) {
+    $.get("/api/users/" + idOnly, function(newUserData) {
+      if (newUserData) {
       // If this post exists, prefill our cms forms with its data
       console.log(newUserData);
     }
   });
-}
+  }
 
 
 
@@ -93,7 +93,7 @@ $(document).ready(function() {
         getAllUserData();
       });
     }
-    });
+  });
     // ____________________________________________________________________________ End of on click
 
 
@@ -135,59 +135,59 @@ $(document).ready(function() {
 
           console.log("Current points coming out of the if statement for j loop: ", matchpoints);
           console.log("Where we are in the j loop: ", j);
-          }
-          for (var k = 3; k < 6; k++) {
-            var plus2 = k + 1;
-            var answercount2 = "answer" + String(plus2);
-            prospectResponses.push(data[i].answercount2);
-            console.log(data[i]);
-            console.log(data[i][answercount2]);
-            console.log(currentResponses[k]);
-            if (currentResponses[k] !== data[i][answercount2]) {
-              matchpoints = matchpoints + 1;
-            }
-            console.log("Current points coming out of the if statement for k loop: ", matchpoints);
-            console.log("Where we are in the j loop: ", k);
-            }
-          var addPoints = {
-            id: prospectId,
-            matchpoints: matchpoints
-          };
-          addMatchPoints(addPoints);
-
         }
-        nextPage();
+        for (var k = 3; k < 6; k++) {
+          var plus2 = k + 1;
+          var answercount2 = "answer" + String(plus2);
+          prospectResponses.push(data[i].answercount2);
+          console.log(data[i]);
+          console.log(data[i][answercount2]);
+          console.log(currentResponses[k]);
+          if (currentResponses[k] !== data[i][answercount2]) {
+            matchpoints = matchpoints + 1;
+          }
+          console.log("Current points coming out of the if statement for k loop: ", matchpoints);
+          console.log("Where we are in the j loop: ", k);
+        }
+        var addPoints = {
+          id: prospectId,
+          matchpoints: matchpoints
+        };
+        addMatchPoints(addPoints);
+
       }
+      nextPage();
+    }
     // }
 
       // Function to set the current potential match's matchpoints to zero
-    function zeroMatchPoints(zeroPoints){
-      $.ajax({
-        method: "PUT",
-        url: "/api/users",
-        data: zeroPoints
-      })
-      .done(function() {
-        console.log("Zero Points Happened for ", zeroPoints);
-      });
-    }
+      function zeroMatchPoints(zeroPoints){
+        $.ajax({
+          method: "PUT",
+          url: "/api/users",
+          data: zeroPoints
+        })
+        .done(function() {
+          console.log("Zero Points Happened for ", zeroPoints);
+        });
+      }
 
-    function addMatchPoints(addPoints) {
-      $.ajax({
-        method: "PUT",
-        url: "/api/users",
-        data: addPoints
-      })
-      .done(function() {
-        console.log("Add Points Happened");
-      });
+      function addMatchPoints(addPoints) {
+        $.ajax({
+          method: "PUT",
+          url: "/api/users",
+          data: addPoints
+        })
+        .done(function() {
+          console.log("Add Points Happened");
+        });
 
-    }
+      }
 
-    function nextPage() {
-      window.location = "swipe.html?id=" + idOnly;
-    }
+      function nextPage() {
+        window.location = "swipe.html?id=" + idOnly;
+      }
 
 
 
-});
+    });

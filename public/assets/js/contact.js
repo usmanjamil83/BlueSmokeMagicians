@@ -19,8 +19,8 @@ getUserData(nameOnly);
 
 // Code below pulls in the user's information from the sql database
 function getUserData(nameOnly) {
-$.get("/api/users/" + nameOnly, function(newUserData) {
-	if (newUserData) {
+	$.get("/api/users/" + nameOnly, function(newUserData) {
+		if (newUserData) {
 		// If this profile exists, log it
 		console.log(newUserData);
 	}
