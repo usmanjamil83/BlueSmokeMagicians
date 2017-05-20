@@ -2,8 +2,8 @@
   "development": {
 
 
-    "username": "newuser",
-    "password": "happy12",
+    "username": "root",
+    "password": "chrisa8300@gmail.com",
 
     "database": "gitup_db",
     "host": "127.0.0.1",
