@@ -9,6 +9,15 @@ body {
     overflow: hidden;
 }
 
+.brand-logo{
+    margin-left: 10px;  
+}
+
+.catopus{
+  width: 67px;
+  height: 67px;
+}
+
 /* Wrapper with padding */
 .wrap  {
     height: 600px;
@@ -214,13 +223,13 @@ body {
     background: url("../img/pane/jobs.png") no-repeat scroll center center;
     background-size: cover;
     background-size: 200px;
-}*/
+    }*/
 
-/* jTinder status text */
-#status {
-    text-align: center;
-    font-size: 18px;
-    font-family: "Roboto", sans-serif;
-    margin-top: 30px;
-    font-weight: bold;
-}
+    /* jTinder status text */
+    #status {
+        text-align: center;
+        font-size: 18px;
+        font-family: "Roboto", sans-serif;
+        margin-top: 30px;
+        font-weight: bold;
+    }
